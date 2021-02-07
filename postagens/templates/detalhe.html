@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <p>{{ post.titulo }}</p>
+    <p>{{ post.conteudo }}</p>
+    {% for a in arquivos %}
+        <a href="{{ a.arquivo.url }}">Baixar arquivo</a><br>
+    {% endfor %}
+
+{% endblock %}

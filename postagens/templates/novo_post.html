@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <br>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <input name="titulo" type="text" class="form-control">
+        <input name="conteudo" type="text" class="form-control">
+        <input required name="arquivo" type="file" multiple class="form-control-file">
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+    </form>
+
+{% endblock %}
